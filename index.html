@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Raleway:400,600|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <div class="navbar-collapse">
+              <div
+                class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3"
+              >
+                <form class="form-inline mb-3 mb-lg-0 ">
+                  <button
+                    class="btn  my-sm-0 nav_search-btn"
+                    type="submit"
+                  ></button>
+                </form>
+              </div>
+
+              <div class="custom_menu-btn">
+                <button onclick="openNav()">
+                  <span class="s-1"> </span>
+                  <span class="s-2"> </span>
+                  <span class="s-3"> </span>
+                </button>
+              </div>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="index.html">inicio</a>
+                  <a href="somos.html">quienes somos</a>
+                  <a href="mision.html">mision,vision</a>
+                  <a href="contac.html">contacto</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class=" slider_section position-relative">
+        <div class="container">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="slider_item-box">
+                  <div class="slider_item-container">
+                    <div class="slider_item-detail">
+                      <h1>
+                        BUSCA LAS MEJORES PROMOCIONES
+                      </h1>
+                    <P>....</P>
+                      
+                     
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+         
+          <form action="GET" action="https://www.google.com/search">
+            <input class="buscar" type="entrada" type="search" name="busqueda">
+
+            
+
+          </form>
+        </div>
+      </section>
+    </div>
+       <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width");
+        document
+          .querySelector(".custom_menu-btn")
+          .classList.toggle("menu_btn-style");
+      }
+    </script>
+  </body>
+</html>
