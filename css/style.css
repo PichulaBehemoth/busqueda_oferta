@@ -675,4 +675,26 @@ input.buscar{
 
 .resultItem {
   margin-bottom: 10px;
+}h1 {
+  text-align: center;
+}
+
+#searchInput {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#searchButton {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#resultsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resultItem {
+  margin-bottom: 10px;
 }
