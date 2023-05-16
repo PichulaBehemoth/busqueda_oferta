@@ -690,11 +690,23 @@ input.buscar{
   margin-left: 10px;
 }
 
-#resultsList {
-  list-style-type: none;
-  padding: 0;
+#resultsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .resultItem {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.resultItem img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   margin-bottom: 10px;
 }
