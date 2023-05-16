@@ -24,12 +24,29 @@ function searchAliExpress(query) {
   // Puedes utilizar técnicas de web scraping o la API de AliExpress (si está disponible)
 
   // Ejemplo de búsqueda ficticia en AliExpress
-  const results = [
-    'Oferta 1 en AliExpress',
-    'Oferta 2 en AliExpress',
-    'Oferta 3 en AliExpress',
-    // ...
-  ];
+TaobaoClient client = new DefaultTaobaoClient(url, appkey, secret);
+AliexpressSolutionProductListGetRequest req = new AliexpressSolutionProductListGetRequest();
+AliexpressSolutionProductListGetRequest.ItemListQuery obj1 = new AliexpressSolutionProductListGetRequest.ItemListQuery();
+obj1.setCurrentPage(2L);
+obj1.setExceptedProductIds(new Long[] { 32962333569,32813963253 };
+);
+obj1.setOffLineTime(7L);
+obj1.setOwnerMemberId("aliqatest01");
+obj1.setPageSize(30L);
+obj1.setProductId(123L);
+obj1.setProductStatusType("onSelling");
+obj1.setSubject("knew odd");
+obj1.setWsDisplay("expire_offline");
+obj1.setHaveNationalQuote("n");
+obj1.setGroupId(1234L);
+obj1.setGmtCreateStart(StringUtils.parseDateTime("2012-01-01 12:13:14"));
+obj1.setGmtCreateEnd(StringUtils.parseDateTime("2012-01-01 12:13:14"));
+obj1.setGmtModifiedStart(StringUtils.parseDateTime("2012-01-01 12:13:14"));
+obj1.setGmtModifiedEnd(StringUtils.parseDateTime("2012-01-01 12:13:14"));
+obj1.setSkuCode("123ABC");
+req.setAeopAEProductListQuery(obj1);
+AliexpressSolutionProductListGetResponse rsp = client.execute(req, sessionKey);
+System.out.println(rsp.getBody());
 
   displayResults(results);
 }
