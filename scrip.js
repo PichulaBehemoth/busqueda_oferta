@@ -35,7 +35,7 @@ function displayResults(results) {
 function searchAliExpress(query) {
   // Ejemplo de búsqueda ficticia en AliExpress con resultados de imágenes
   const results = [
-    { image:  'https://m.media-amazon.com/images/I/71NgJLkErQL._AC_SX355_.jpg', Dell Portátil empresarial Latitude 5490  'laptop', price: '$4,199' },
+    { image: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSmHms60UJ2kod1SvGvcbIYb2YClRab-K023kYFgOgpAbcGepY3N6MnFc-sf7QteXxrv4Os4y0FDr2PJC2SCKUD1qb5plEbYnDS2luatySjjzxu9Xgiuvd4QQMznJFjZiYkGQ&usqp=CAc',  'laptop', price: '$4,199' },
     { image: 'ruta_imagen_2.jpg', title: 'Producto 2', price: '$15' },
     { image: 'ruta_imagen_3.jpg', title: 'Producto 3', price: '$20' },
     // ...
