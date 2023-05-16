@@ -1,52 +1,45 @@
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
-const resultsList = document.getElementById('resultsList');
+const resultsContainer = document.getElementById('resultsContainer');
 
 function displayResults(results) {
-  resultsList.innerHTML = '';
+  resultsContainer.innerHTML = '';
 
   if (results.length === 0) {
-    const noResultsItem = document.createElement('li');
+    const noResultsItem = document.createElement('div');
     noResultsItem.innerText = 'No se encontraron resultados.';
-    resultsList.appendChild(noResultsItem);
+    resultsContainer.appendChild(noResultsItem);
   } else {
     results.forEach((result) => {
-      const resultItem = document.createElement('li');
+      const resultItem = document.createElement('div');
       resultItem.classList.add('resultItem');
-      resultItem.innerText = result;
-      resultsList.appendChild(resultItem);
+
+      const img = document.createElement('img');
+      img.src = result.image; // Asigna la URL de la imagen del producto
+
+      const title = document.createElement('h3');
+      title.innerText = result.title;
+
+      const price = document.createElement('p');
+      price.innerText = `Precio: ${result.price}`;
+
+      resultItem.appendChild(img);
+      resultItem.appendChild(title);
+      resultItem.appendChild(price);
+
+      resultsContainer.appendChild(resultItem);
     });
   }
 }
 
 function searchAliExpress(query) {
-  // Aquí debes implementar la lógica para buscar en AliExpress
-  // Puedes utilizar técnicas de web scraping o la API de AliExpress (si está disponible)
-
-  // Ejemplo de búsqueda ficticia en AliExpress
-TaobaoClient client = new DefaultTaobaoClient(url, appkey, secret);
-AliexpressSolutionProductListGetRequest req = new AliexpressSolutionProductListGetRequest();
-AliexpressSolutionProductListGetRequest.ItemListQuery obj1 = new AliexpressSolutionProductListGetRequest.ItemListQuery();
-obj1.setCurrentPage(2L);
-obj1.setExceptedProductIds(new Long[] { 32962333569,32813963253 };
-);
-obj1.setOffLineTime(7L);
-obj1.setOwnerMemberId("aliqatest01");
-obj1.setPageSize(30L);
-obj1.setProductId(123L);
-obj1.setProductStatusType("onSelling");
-obj1.setSubject("knew odd");
-obj1.setWsDisplay("expire_offline");
-obj1.setHaveNationalQuote("n");
-obj1.setGroupId(1234L);
-obj1.setGmtCreateStart(StringUtils.parseDateTime("2012-01-01 12:13:14"));
-obj1.setGmtCreateEnd(StringUtils.parseDateTime("2012-01-01 12:13:14"));
-obj1.setGmtModifiedStart(StringUtils.parseDateTime("2012-01-01 12:13:14"));
-obj1.setGmtModifiedEnd(StringUtils.parseDateTime("2012-01-01 12:13:14"));
-obj1.setSkuCode("123ABC");
-req.setAeopAEProductListQuery(obj1);
-AliexpressSolutionProductListGetResponse rsp = client.execute(req, sessionKey);
-System.out.println(rsp.getBody());
+  // Ejemplo de búsqueda ficticia en AliExpress con resultados de imágenes
+  const results = [
+    { image: 'ruta_imagen_1.jpg', title: 'Producto 1', price: '$10' },
+    { image: 'ruta_imagen_2.jpg', title: 'Producto 2', price: '$15' },
+    { image: 'ruta_imagen_3.jpg', title: 'Producto 3', price: '$20' },
+    // ...
+  ];
 
   displayResults(results);
 }
